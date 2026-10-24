@@ -1,24 +1,17 @@
 %% Аналитические вычисления
 syms s t K;
-
 % Передаточная функция динамического звена (в зависимости от варианта)
 W = ???
-
 % 1. Единичное ступенчатое воздействие
 U_step = laplace(???);
-
 % 2. Выходной сигнал
 Y_step = ???;
-
 % 3. Переходная функция
 h = ilaplace(???);
-
 % 4. Импульсное воздействие
 U_impulse = laplace(???);
-
 % 5. Выходной сигнал
 Y_impulse = ???;
-
 % 6. Импульсная переходная функция
 w = ilaplace(Y_impulse, s, t);
 
@@ -42,7 +35,6 @@ ylabel('h(t)');
 legend('show', 'Location', 'northwest');
 hold off;
 
-
 %% 8. Построение импульсных характеристик
 figure;
 hold on;
@@ -60,7 +52,6 @@ ylabel('w(t)');
 legend('show', 'Location', 'northwest');
 hold off;
 
-
 %% 9. Проверка с помощью Control System Toolbox
 s_tf = tf('s');
 
@@ -69,7 +60,7 @@ hold on;
 grid on;
 
 for k = K_values
-    %Задаётся вручную
+    % Задаётся вручную
     W_check = ???;
     step(W_check, time);
 end
@@ -83,7 +74,7 @@ figure;
 hold on;
 grid on;
 for k = K_values
-    %Задаётся вручную
+    % Задаётся вручную
     W_check = ???;
     impulse(W_check, time);
 end
